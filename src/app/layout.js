@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 import Link from "next/link";
-import ThemeSwitch from "../components/ThemeSwitch"; // Import the ThemeSwitch component
-
+import ThemeSwitch from "../components/ThemeSwitch"; 
+import { GitHubIcon,LinkedInIcon } from "../components/Icons";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,18 +32,31 @@ export default function RootLayout({ children }) {
               </Link>
             </li>
             <li className="group px-4 py-2 rounded transition-colors duration-200 hover:bg-[var(--navbar-options-hover)]">
-              <Link href="/blog/CART" className="block w-full h-full">
+              <Link href="/blog" className="block w-full h-full">
                 Blog
               </Link>
             </li>
             <li className="group px-4 py-2 rounded transition-colors duration-200 hover:bg-[var(--navbar-options-hover)]">
-              <a href="/projects" className="block w-full h-full">
-                Projects
+              <a href="/work" className="block w-full h-full">
+                My work
               </a>
             </li>
           </ul>
           {/* Theme Switch */}
+          <section className="flex items-center space-2">
           <ThemeSwitch />
+
+          <a href= "https://github.com/aaronma300604" target="_blank" rel="noopener noreferrer"
+            className="px-4 py-2 text-[var(--navbar-options-text)] rounded transition-colors duration-200 hover:bg-[var(--navbar-options-hover)]">
+            {GitHubIcon}
+          </a>
+
+          <a href= "https://www.linkedin.com/in/aarón-mayoral-ansias-5225b6353/" target="_blank" rel="noopener noreferrer"
+            className="px-4 py-2 text-[var(--navbar-options-text)] rounded transition-colors duration-200 hover:bg-[var(--navbar-options-hover)]">
+            {LinkedInIcon}
+          </a>
+
+          </section>
         </nav>
         {/* Main Content */}
         <main className="pt-20">{children}</main>

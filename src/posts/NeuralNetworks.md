@@ -4,6 +4,8 @@ tags:
 created: 2025-04-23
 title: Neural Networks, an universal function approximator
 image: /images/neural-networks-bg2.png
+description: description
+link: https://github.com/aaronma300604/LearningMachineLearning
 ---
 ### General Idea
 

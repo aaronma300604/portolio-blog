@@ -7,6 +7,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import ZoomBlurBackground from '@/components/ZoomBlurBackground';
+import { LinkIcon } from '@/components/Icons';
 
 
 
@@ -92,15 +93,27 @@ export default async function Page({ params }) {
     return (
       <ZoomBlurBackground imageUrl={data.image || '/images/examplecart.svg'}>
       <div className="prose max-w-4xl mt-40 mx-auto p-8 bg-[var(--post-container-bg)]/70 backdrop-blur-md rounded-2xl shadow-xl">
-        <h1 className="mt-10 text-4xl font-bold">{data.title}</h1>
-        <ReactMarkdown
-          skipHtml={false}
-          remarkPlugins={[remarkGfm, remarkMath]}
-          rehypePlugins={[rehypeKatex]}
-          components={renderers}
+      <div className="flex items-center mt-10">
+      <h1 className="text-4xl font-bold flex items-center">
+        {data.title}
+        <a
+        href={data.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="ml-4 w-8 h-8 flex items-center justify-center"
         >
-          {transformedContent}
-        </ReactMarkdown>
+        {LinkIcon}
+        </a>
+      </h1>
+      </div>
+      <ReactMarkdown
+      skipHtml={false}
+      remarkPlugins={[remarkGfm, remarkMath]}
+      rehypePlugins={[rehypeKatex]}
+      components={renderers}
+      >
+      {transformedContent}
+      </ReactMarkdown>
       </div>
       </ZoomBlurBackground>
     );

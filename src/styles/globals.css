@@ -5,8 +5,13 @@
   --foreground: #121212;
   --post-container-bg: #e7e7e7 ;
   --navbar-options-text: #121212;
-  --navbar-options-hover: #e5e5e5; 
+  --navbar-options-hover: #e5e5e5;
+  --buttons-bg: #e5e5e5;
+  --buttons-hover: #d3d3d3; 
 
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .dark {
@@ -15,6 +20,8 @@
   --post-container-bg: #171717; 
   --navbar-options-text: #d3d3d3;
   --navbar-options-hover: #2a2a2a; 
+  --buttons-bg: #2a2a2a;
+  --buttons-hover: #3a3a3a;
 }
 
 body {
@@ -22,5 +29,34 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-mono), Arial, Helvetica, sans-serif;
 }
+
+.typing-effect {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  border-right: 8px solid var(--navbar-options-text);
+  white-space: nowrap;
+  visibility: hidden;
+  animation: typing 1s steps(9) 0.5s forwards, blink 1.25s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+    visibility: visible;
+  }
+  100% {
+    width: 9ch;
+    visibility: visible;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
 
 

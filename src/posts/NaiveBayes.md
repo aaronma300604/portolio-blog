@@ -1,8 +1,12 @@
 ---
 tags:
   - MachineLearningTheory
-title: Naive Bayes, an easy but effective Algorithm
+title: It's not bad being Naive (Bayes)
 created: 2025-04-23
+image: /images/neural-networks-bg2.png
+description: Explaining the Naive Bayes  algorithm
+link: https://github.com/aaronma300604/LearningMachineLearning
+
 ---
 
 ### General idea
