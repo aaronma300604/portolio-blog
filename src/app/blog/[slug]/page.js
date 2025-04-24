@@ -27,7 +27,7 @@ function transformExcalidrawLinks(content) {
     const newContent = content.replace(/!\[\[([^\]]+?)(?:\s*\|\s*\d+)?\]\]/g, (match, filename) => {
         console.log(filename);
         // Replace .excalidraw extension with .svg
-        const imagePath = `/excalidraw/${filename.replace('.excalidraw', '.svg').replace(/\s+/g, '-').toLowerCase()}`;
+        const imagePath = `/embeddings/${filename.replace('.excalidraw', '.svg').replace(/\s+/g, '-').toLowerCase()}`;
         console.log(imagePath);
         return `![${filename}](${imagePath})`;
     });
@@ -90,11 +90,11 @@ export default async function Page({ params }) {
     const transformedContent = transformObsidianLinks(content);
   
     return (
-      <ZoomBlurBackground imageUrl={data.imageUrl || '/excalidraw/examplecart.svg'}>
-      <div className="prose max-w-4xl mx-auto p-8 bg-[171717]/70 backdrop-blur-md rounded-2xl shadow-xl">
+      <ZoomBlurBackground imageUrl={data.image || '/images/examplecart.svg'}>
+      <div className="prose max-w-4xl mt-40 mx-auto p-8 bg-[var(--post-container-bg)]/70 backdrop-blur-md rounded-2xl shadow-xl">
         <h1 className="mt-10 text-4xl font-bold">{data.title}</h1>
         <ReactMarkdown
-            skipHtml={false}
+          skipHtml={false}
           remarkPlugins={[remarkGfm, remarkMath]}
           rehypePlugins={[rehypeKatex]}
           components={renderers}
