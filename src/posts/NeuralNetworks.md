@@ -2,6 +2,7 @@
 tags:
   - MachineLearningTheory
 created: 2025-04-23
+title: Neural Networks, an universal function approximator
 ---
 ### General Idea
 

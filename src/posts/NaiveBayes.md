@@ -1,7 +1,7 @@
 ---
 tags:
   - MachineLearningTheory
-title: "Naive Bayes Algorithm"
+title: Naive Bayes, an easy but effective Algorithm
 created: 2025-04-23
 ---
 

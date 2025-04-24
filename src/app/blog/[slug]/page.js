@@ -6,6 +6,7 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
+import ZoomBlurBackground from '@/components/ZoomBlurBackground';
 
 
 
@@ -89,8 +90,9 @@ export default async function Page({ params }) {
     const transformedContent = transformObsidianLinks(content);
   
     return (
-      <div className="prose max-w-4xl mx-auto p-8">
-        <h1>{data.title}</h1>
+      <ZoomBlurBackground imageUrl={data.imageUrl || '/excalidraw/examplecart.svg'}>
+      <div className="prose max-w-4xl mx-auto p-8 bg-[171717]/70 backdrop-blur-md rounded-2xl shadow-xl">
+        <h1 className="mt-10 text-4xl font-bold">{data.title}</h1>
         <ReactMarkdown
             skipHtml={false}
           remarkPlugins={[remarkGfm, remarkMath]}
@@ -100,5 +102,6 @@ export default async function Page({ params }) {
           {transformedContent}
         </ReactMarkdown>
       </div>
+      </ZoomBlurBackground>
     );
   }

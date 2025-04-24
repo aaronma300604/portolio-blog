@@ -2,6 +2,7 @@
 tags:
   - MachineLearningTheory
 created: 2025-04-23
+title: KNN, a proximity sensor
 ---
 
 ### General idea

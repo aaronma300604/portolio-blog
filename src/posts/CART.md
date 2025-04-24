@@ -2,6 +2,7 @@
 tags:
   - MachineLearningTheory
 created: 2025-04-23
+title: Classification and regression trees to plant a forest
 ---
 
 ### General idea
