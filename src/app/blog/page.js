@@ -24,7 +24,7 @@ export default function BlogLandingPage() {
     
 
         return posts
-        .sort((a, b) => new Date(b.frontmatter.created) - new Date(a.frontmatter.created))
+        .sort((a, b) => new Date(b.frontmatter.last_update) - new Date(a.frontmatter.last_update))
         .slice(0, 3);
     }
     
@@ -38,13 +38,13 @@ export default function BlogLandingPage() {
             image= {post.frontmatter.image}
             title= {post.frontmatter.title}
             description= {post.frontmatter.description}
-            created= {post.frontmatter.created}
+            last_update= {post.frontmatter.last_update}
+            tags= {post.frontmatter.tags}
         />;
     });
 
 return (
     <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] px-8 py-16">
-    {/* Welcome Section */}
     <header className="text-center mb-16">
         <div className="relative overflow-hidden text-5xl font-bold mb-4">
             <h1 className="typing-effect">Welcome!</h1>
@@ -63,7 +63,6 @@ return (
         </div>
     </section>
 
-    {/* View All Posts Button */}
     <div className="text-center mt-16">
         <Link href="/blog/all-posts">
         <div className="inline-flex items-center bg-[var(--buttons-bg)] text-[var(--foreground)] px-8 py-3 rounded-lg font-semibold hover:bg-[var(--buttons-hover)] transition-colors duration-200 group">

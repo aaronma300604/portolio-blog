@@ -1,10 +1,10 @@
 ---
 tags:
   - MachineLearningTheory
-created: 2025-04-23
+last_update: 2025-04-23
 title: Neural Networks, an universal function approximator
-image: /images/neural-networks-bg2.png
-description: description
+image: /images/neural-networks-bg.png
+description: Explaining the logic behind neural networks
 link: https://github.com/aaronma300604/LearningMachineLearning
 ---
 ### General Idea

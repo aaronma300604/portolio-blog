@@ -1,10 +1,11 @@
 ---
 tags:
   - MachineLearningTheory
-created: 2025-04-23
-image: /images/neural-networks-bg2.png
+  - Algorithm
+last_update: 2025-04-23
+image: /images/neural-networks-bg.png
 title: KNN, a proximity sensor
-description: Explaining the k nearest neighbors algorithm
+description: Explaining the K nearest neighbors algorithm
 link: https://github.com/aaronma300604/LearningMachineLearning
 ---
 

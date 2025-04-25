@@ -11,7 +11,6 @@ import { LinkIcon } from '@/components/Icons';
 
 
 
-// Function to generate IDs for headers
 function generateHeaderIdFromChildren(children) {
         const headerText = typeof children === 'string'
         ? children
@@ -19,15 +18,13 @@ function generateHeaderIdFromChildren(children) {
     
         return headerText
         .toLowerCase()
-        .replace(/\s+/g, '-') // Replace spaces with hyphens
-        .replace(/[^\w-]/g, ''); // Remove any non-alphanumeric characters
+        .replace(/\s+/g, '-') 
+        .replace(/[^\w-]/g, '');
     }
 
-// Function to handle Excalidraw links
 function transformExcalidrawLinks(content) {
     const newContent = content.replace(/!\[\[([^\]]+?)(?:\s*\|\s*\d+)?\]\]/g, (match, filename) => {
         console.log(filename);
-        // Replace .excalidraw extension with .svg
         const imagePath = `/embeddings/${filename.replace('.excalidraw', '.svg').replace(/\s+/g, '-').toLowerCase()}`;
         console.log(imagePath);
         return `![${filename}](${imagePath})`;
@@ -35,26 +32,19 @@ function transformExcalidrawLinks(content) {
     return newContent;
 }
 
-
-  
-  // Function to handle Obsidian internal links
   function transformObsidianInternalLinks(content) {
     return content.replace(/(?<!!)\[\[([^\]]+)\]\]/g, (match, p1) => {
       const [slug, label] = p1.split('|');
-      const linkText = label || slug.trim(); // Use alias or the slug itself
+      const linkText = label || slug.trim();
       const anchorLink = `#${slug.trim().toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')}`;
       return `[${linkText}](${anchorLink})`;
     });
   }
   
-  // Main function to transform all links
   function transformObsidianLinks(content) {
-     // Transform Excalidraw links
     content = transformObsidianInternalLinks(content);
     content = transformExcalidrawLinks(content);
-    
-       // Transform Obsidian internal links
-    return content;
+        return content;
   }
   
   
@@ -83,11 +73,14 @@ const renderers = {
   };
 
 export default async function Page({ params }) {
+  if (!params?.slug) {
+    throw new Error("Missing slug param");
+  }
+  
     const filePath = path.join(postsDir, `${params.slug}.md`);
     const fileContents = fs.readFileSync(filePath, 'utf-8');
     const { data, content } = matter(fileContents);
   
-    // Transform Obsidian links into standard Markdown links
     const transformedContent = transformObsidianLinks(content);
   
     return (

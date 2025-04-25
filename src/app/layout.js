@@ -23,8 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en"
     className="dark">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* NavBar */}
-        <nav className="fixed top-0 left-0 right-0 w-[60%] h-20 mx-auto z-10 bg-transparent text-[var(--navbar-options-text)] py-4 px-8 flex items-center justify-between">
+        <nav className="fixed top-0 left-0 right-0 w-[60%] h-20 mx-auto z-10 bg-[var(--background)] text-[var(--navbar-options-text)] py-4 px-8 flex items-center justify-between">
           <ul className="flex space-x-2">
             <li className="group px-4 py-2 rounded transition-colors duration-200 hover:bg-[var(--navbar-options-hover)]">
               <Link href="/" className="block w-full h-full">
@@ -42,7 +41,6 @@ export default function RootLayout({ children }) {
               </a>
             </li>
           </ul>
-          {/* Theme Switch */}
           <section className="flex items-center space-2">
           <ThemeSwitch />
 
@@ -58,7 +56,6 @@ export default function RootLayout({ children }) {
 
           </section>
         </nav>
-        {/* Main Content */}
         <main className="pt-20">{children}</main>
       </body>
     </html>

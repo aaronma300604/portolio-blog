@@ -7,11 +7,9 @@ export default function ThemeSwitch() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check the user's system preference for dark mode
     const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
     setIsDarkMode(prefersDarkMode);
 
-    // Apply the initial theme
     if (prefersDarkMode) {
       document.documentElement.classList.add("dark");
     } else {

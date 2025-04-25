@@ -1,10 +1,11 @@
 ---
 tags:
   - MachineLearningTheory
+  - Algorithm
 image: /images/cart-bg.png
 title: Classification and regression trees to grow a forest
-description: A explanation about the CART algorithm 
-created: 2025-04-23
+description: An explanation about the CART algorithm 
+last_update: 2025-04-23
 link: https://github.com/aaronma300604/LearningMachineLearning
 ---
 
