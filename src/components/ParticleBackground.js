@@ -19,7 +19,8 @@ useEffect(() => {
     particle.style.left = `${Math.random() * 100}%`;
     particle.style.top = `${Math.random() * 100}%`;
     particle.style.animationDuration = `${Math.random() * 10 + 10}s`;
-    particle.style.position = 'absolute'; 
+    particle.style.position = 'absolute';
+    particle.style.color = Math.random() < 0.4 ? 'var(--br-principal)' : 'var(--particles-fill)'; 
 
     particlesContainer.appendChild(particle);
     }
@@ -29,7 +30,7 @@ return (
     <div
     id="particles"
     className="fixed top-0 left-0 w-full h-screen overflow-hidden pointer-events-none z-[0]"
-    />
+    /> 
 
 );
 }

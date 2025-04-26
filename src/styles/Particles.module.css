@@ -1,20 +1,22 @@
 .particle {
     position: absolute;
-    background-color: var(--particles-fill); /* O el color que desees para las partículas */
     border-radius: 50%;
     animation: fall infinite linear;
-  }
+    background-color: currentColor;
+    opacity: 0.8;
+    z-index: 10;
+    display: block;
+}
   
-  .fall {
+.fall {
     animation-name: fall;
-  }
+}
   
-  @keyframes fall {
+@keyframes fall {
     0% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
     100% {
-      transform: translateY(100vh); /* Hace que las partículas caigan hasta la parte inferior */
+        transform: translateY(100vh);
     }
-  }
-  
+}

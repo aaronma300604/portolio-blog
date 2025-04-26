@@ -10,7 +10,7 @@ const dropdownRef = useRef(null);
 
 useEffect(() => {
     const handleScroll = () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 50) {
         setShowScrollButton(true);
     } else {
         setShowScrollButton(false);

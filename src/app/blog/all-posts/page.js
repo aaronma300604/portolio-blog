@@ -1,8 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import PostListCard from "@/components/PostListCard";
-import ProgressScrollBar from "@/components/ProgressScrollBar";
+import TagFilteredPosts from "@/components/TagFilteredPosts";
 
 export default function AllPosts() {
     function getPosts() {
@@ -25,25 +24,11 @@ export default function AllPosts() {
 
     const posts = getPosts();
 
-    const postCards = posts.map((post, index) => {
-        return (
-            <PostListCard
-                key={index}
-                href={`/blog/${post.slug}`}
-                image={post.frontmatter.image}
-                title={post.frontmatter.title}
-                description={post.frontmatter.description}
-                last_update={post.frontmatter.last_update}
-                tags={post.frontmatter.tags}
-            />
-        );
-    });
-
     return (
         <>        
         <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] px-8 py-16">
             <div className="text-center mb-12">
-                <h1 className="text-3xl font-semibold mb-4">All my posts</h1>
+                <h1 className="text-3xl font-semibold mb-4">All my posts<strong className="text-[var(--br-principal)]">.</strong></h1>
                 <p className="text-lg max-w-2xl mx-auto">
                     Here you will find articles on various topics, mostly ML and AI.
                     Feel free to explore and learn.
@@ -53,9 +38,7 @@ export default function AllPosts() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-6">
-                {postCards}
-            </div>
+            <TagFilteredPosts initialPosts={posts} />
         </div>
         </>
     );
