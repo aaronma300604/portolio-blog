@@ -2,6 +2,9 @@
 tags:
   - MachineLearningTheory
   - Project
+technologies:
+  - Python
+  - JupyterNotebook
 last_update: 2025-04-23
 title: Classification and regression trees to grow a forest
 image: /images/cart-bg.png

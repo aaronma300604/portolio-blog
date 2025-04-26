@@ -44,7 +44,7 @@ export default function BlogLandingPage() {
     });
 
     return (
-        <div className="max-h-screen overflow-hidden bg-[var(--background)] text-[var(--foreground)] px-6 py-12">
+        <div className="overflow-hidden bg-[var(--background)] text-[var(--foreground)] px-6 py-12">
 
             <header className="text-center mb-12">
                 <div className="relative overflow-hidden text-4xl font-bold mb-2 text-[var(--br-principal)]">

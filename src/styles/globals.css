@@ -7,12 +7,15 @@
   --navbar-options-text: #121212;
   --navbar-options-hover: #e5e5e5;
   --buttons-bg: #e5e5e5;
-  --buttons-hover: #d3d3d3;
   --scroll-bar-progressing: #eee;
   --br-principal: #e6a4b4;
   --br-principal-hover: #cc7087;
   --about-bg: rgba(231,231,231,0.7);
-  --particles-fill:rgba(0, 0, 0, 0.7)
+  --particles-fill:rgba(0, 0, 0, 0.7);
+  --footer-background: #1a1a1a;
+  --footer-text: #f5f5f5;
+  --border: rgba(255, 255, 255, 0.1);
+  --accent: #e6a4b4;
 }
 html {
   scroll-behavior: smooth;
@@ -29,12 +32,12 @@ html {
   --br-principal: #00a743;
   --br-principal-hover: #007c32;
   --about-bg: rgba(23,23,23,0.7);
-  --particles-fill:rgba(255, 255, 255, 0.7)
+  --particles-fill:rgba(255, 255, 255, 0.7);
+  --footer-background: #0a0a0a;
+  --footer-text: #f5f5f5;
+  --border: rgba(255, 255, 255, 0.1);
+  --accent: #00a743;
 }
-
-
-
-
 
 body {
   background: var(--background);

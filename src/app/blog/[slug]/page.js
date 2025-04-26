@@ -7,9 +7,10 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import ZoomBlurBackground from '@/components/ZoomBlurBackground';
-import { LinkIcon } from '@/components/Icons';
+import { LinkIcon, techIcons } from '@/components/Icons';
 import ProgressScrollBar from '@/components/ProgressScrollBar';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 
@@ -48,9 +49,7 @@ function transformExcalidrawLinks(content) {
     content = transformExcalidrawLinks(content);
         return content;
   }
-  
-  
-      
+   
 
 const postsDir = path.join(process.cwd(), 'src', 'posts');
 
@@ -83,36 +82,47 @@ export default async function Page({ params }) {
     const fileContents = fs.readFileSync(filePath, 'utf-8');
     const { data, content } = matter(fileContents);
   
+    console.log(data.technologies);
     const transformedContent = transformObsidianLinks(content);
+    const transformedTech =  data.technologies?data.technologies.map((tech) => (
+      <div key={tech} className="text-xs px-2 py-1 rounded-full flex items-center whitespace-nowrap bg-[var(--navbar-options-hover)] text-[var(--foreground)]/80 mx-1 my-1">
+        <Image src={techIcons[tech]} alt={`${tech} icon`} width={50} height={50} className="h-5 w-5 mr-1.5" />
+        <span>{tech}</span>
+      </div>
+    )) : [];
   
     return (
       <>
       <ZoomBlurBackground imageUrl={data.image || '/images/examplecart.svg'}>
       <div className="prose max-w-4xl mt-40 mx-auto p-8 bg-[var(--post-container-bg)]/70 backdrop-blur-md rounded-2xl shadow-xl">
-      <div className="flex items-center mt-10">
-      <h1 className="text-4xl font-bold flex items-center">
-        {data.title}
-        {data.title && <Link
-        href={data.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="ml-4 w-8 h-8 flex items-center justify-center text-[var(--br-principal)] hover:text-[var(--br-principal-hover)] transition-colors duration-300"
+          <div className="flex items-center mt-10">
+            <h1 className="text-4xl font-bold flex items-center">
+              {data.title}
+              {data.title && <Link
+              href={data.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-4 w-8 h-8 flex items-center justify-center text-[var(--br-principal)] hover:text-[var(--br-principal-hover)] transition-colors duration-300"
+              >
+              {LinkIcon}
+              </Link>}
+            </h1>
+          </div>
+
+        <section className="mt-4 flex flex-wrap">
+          {transformedTech && transformedTech}
+        </section>
+
+        <ReactMarkdown
+        skipHtml={false}
+        remarkPlugins={[remarkGfm, remarkMath]}
+        rehypePlugins={[rehypeKatex]}
+        components={renderers}
         >
-        {LinkIcon}
-        </Link>}
-      </h1>
-      </div>
-      <ReactMarkdown
-      skipHtml={false}
-      remarkPlugins={[remarkGfm, remarkMath]}
-      rehypePlugins={[rehypeKatex]}
-      components={renderers}
-      >
-      {transformedContent}
-      </ReactMarkdown>
+          {transformedContent}
+        </ReactMarkdown>
       </div>
       </ZoomBlurBackground>
-      <ProgressScrollBar />  
       </>
     );
   }

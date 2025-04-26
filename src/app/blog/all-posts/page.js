@@ -57,7 +57,6 @@ export default function AllPosts() {
                 {postCards}
             </div>
         </div>
-        <ProgressScrollBar />  
         </>
     );
 }
