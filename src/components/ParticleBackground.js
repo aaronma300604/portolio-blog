@@ -6,7 +6,7 @@ import styles from '@/styles/Particles.module.css';
 export default function ParticlesBackground({ children }) {
 useEffect(() => {
     const particlesContainer = document.getElementById('particles');
-    const numParticles = 50;
+    const numParticles = 75;
 
     for (let i = 0; i < numParticles; i++) {
     const particle = document.createElement('div');

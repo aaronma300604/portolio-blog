@@ -1,6 +1,6 @@
 .particle {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.7); /* O el color que desees para las partículas */
+    background-color: var(--particles-fill); /* O el color que desees para las partículas */
     border-radius: 50%;
     animation: fall infinite linear;
   }

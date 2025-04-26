@@ -1,7 +1,7 @@
 ---
 tags:
   - MachineLearningTheory
-  - Algorithm
+  - Project
 last_update: 2025-04-23
 title: KNN, a proximity sensor
 image: /images/knn-bg.png

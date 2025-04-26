@@ -9,6 +9,7 @@ import 'katex/dist/katex.min.css';
 import ZoomBlurBackground from '@/components/ZoomBlurBackground';
 import { LinkIcon } from '@/components/Icons';
 import ProgressScrollBar from '@/components/ProgressScrollBar';
+import Link from 'next/link';
 
 
 
@@ -91,14 +92,14 @@ export default async function Page({ params }) {
       <div className="flex items-center mt-10">
       <h1 className="text-4xl font-bold flex items-center">
         {data.title}
-        <a
+        {data.title && <Link
         href={data.link}
         target="_blank"
         rel="noopener noreferrer"
         className="ml-4 w-8 h-8 flex items-center justify-center text-[var(--br-principal)] hover:text-[var(--br-principal-hover)] transition-colors duration-300"
         >
         {LinkIcon}
-        </a>
+        </Link>}
       </h1>
       </div>
       <ReactMarkdown

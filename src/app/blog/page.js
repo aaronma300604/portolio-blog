@@ -62,7 +62,7 @@ export default function BlogLandingPage() {
 
             <div className="text-center mt-12">
                 <Link href="/blog/all-posts">
-                    <div className="inline-flex items-center bg-[var(--buttons-bg)] text-[var(--foreground)] px-6 py-2 rounded-lg font-semibold hover:bg-[var(--buttons-hover)] transition-colors duration-200 group">
+                    <div className="inline-flex items-center bg-[var(--buttons-bg)] text-[var(--foreground)] px-6 py-2 rounded-lg font-semibold hover:bg-[var(--br-principal)] transition-colors duration-200 group">
                         View All Posts
                         <span className="ml-2 transform transition-transform duration-200 group-hover:translate-x-2 overflow-hidden">
                             {ArrowIcon}

@@ -46,7 +46,9 @@ export default function AllPosts() {
                 <h1 className="text-3xl font-semibold mb-4">All my posts</h1>
                 <p className="text-lg max-w-2xl mx-auto">
                     Here you will find articles on various topics, mostly ML and AI.
-                    I usually create a Github repository where I implement things with what I learn writing the posts.
+                    Feel free to explore and learn.
+                    <br />
+                    The posts with the tag <strong>Project</strong> have GitHub repository associated.
                     Those repos are linked next to the post titles. Be sure to check them out!
                 </p>
             </div>

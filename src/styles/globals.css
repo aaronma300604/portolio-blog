@@ -11,8 +11,8 @@
   --scroll-bar-progressing: #eee;
   --br-principal: #e6a4b4;
   --br-principal-hover: #cc7087;
- 
-
+  --about-bg: rgba(231,231,231,0.7);
+  --particles-fill:rgba(0, 0, 0, 0.7)
 }
 html {
   scroll-behavior: smooth;
@@ -25,10 +25,11 @@ html {
   --navbar-options-text: #d3d3d3;
   --navbar-options-hover: #2a2a2a; 
   --buttons-bg: #2a2a2a;
-  --buttons-hover: #3a3a3a;
   --scroll-bar-progressing: #2f2f2f;
-  --br-principal: #00c950;
+  --br-principal: #00a743;
   --br-principal-hover: #007c32;
+  --about-bg: rgba(23,23,23,0.7);
+  --particles-fill:rgba(255, 255, 255, 0.7)
 }
 
 

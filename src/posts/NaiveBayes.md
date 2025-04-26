@@ -1,7 +1,7 @@
 ---
 tags:
   - MachineLearningTheory
-  - Algorithm
+  - Project
 last_update: 2025-04-23
 title: It's not bad being Naive (Bayes)
 image: /images/naive-bayes-bg.png
