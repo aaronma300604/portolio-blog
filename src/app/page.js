@@ -30,7 +30,7 @@ return(
         <div className="flex-1 p-8 bg-[var(--about-bg)] text-[var(--foreground)]">
             <h1 className="text-3xl font-bold mb-4">Hi! I&apos;m Aarón<strong className="text-[var(--br-principal)]">.</strong></h1> 
             <p className="mt-3 sm:mt-4 text-sm sm:text-base font-light leading-relaxed">
-            I&apos;m a software engineering student in University of Sevilla, Spain. I like software development in general, specially Machine Learning and Artificial Intelligence.
+            I&apos;m a software engineering student at the University of Sevilla, Spain. I like software development in general, specially Machine Learning and Artificial Intelligence.
             That&apos;s the reason why I created this portfolio and blog!
             </p>
         </div>
@@ -83,7 +83,7 @@ return(
             </p>
             <br/>
             <p>
-                You will also find posts about other tech topics I don&apos;t have projects on. You can look for what you want filtering by tags, or you can check the latest posts! Stay tuned!
+                You will also find posts about other tech topics I don&apos;t have projects on. You can look for what you want filtering by tags, or you can check out the latest posts! Stay tuned!
             </p>
             </div>
 
@@ -112,7 +112,7 @@ return(
 
     <section className="w-full max-w-4xl mx-auto mt-12 mb-16 p-4">
         <h2 className="text-3xl font-bold text-center mb-8">My Stack<strong className="text-[var(--br-principal)]">.</strong></h2>
-        <p> This are the main technologies I have experience with: </p>
+        <p> These are the main technologies I have experience with: </p>
         <div className="flex flex-wrap justify-center gap-4 mt-4">
         {myTechStack.map((tech) => (
             <div 

@@ -5,7 +5,7 @@ tags:
 technologies:
   - Python
   - JupyterNotebook
-last_update: 2025-04-23
+last_update: 2025-04-20
 title: KNN, a proximity sensor
 image: /images/knn-bg.png
 description: Explaining the K nearest neighbors algorithm

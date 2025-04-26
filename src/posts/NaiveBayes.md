@@ -5,7 +5,7 @@ tags:
 technologies:
   - Python
   - JupyterNotebook
-last_update: 2025-04-23
+last_update: 2025-04-18
 title: It's not bad being Naive (Bayes)
 image: /images/naive-bayes-bg.png
 description: Explaining the Naive Bayes  algorithm

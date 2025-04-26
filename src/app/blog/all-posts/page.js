@@ -30,11 +30,11 @@ export default function AllPosts() {
             <div className="text-center mb-12">
                 <h1 className="text-3xl font-semibold mb-4">All my posts<strong className="text-[var(--br-principal)]">.</strong></h1>
                 <p className="text-lg max-w-2xl mx-auto">
-                    Here you will find articles on various topics, mostly ML and AI.
+                    Here, you will find articles on various topics, mostly on ML and AI.
                     Feel free to explore and learn.
                     <br />
-                    The posts with the tag <strong>Project</strong> have GitHub repository associated.
-                    Those repos are linked next to the post titles. Be sure to check them out!
+                    The posts with the <strong>Project</strong> tag have a GitHub repository associated.
+                    The repos are linked next to the post titles. Be sure to check them out!
                 </p>
             </div>
 

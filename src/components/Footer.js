@@ -28,6 +28,12 @@ return (
                                 LinkedIn
                             </Link>
                         </li>
+                        <li className="flex items-center">
+                            {GitHubIcon}
+                            <Link href="https://github.com/aaronma300604" target="_blank" rel="noopener noreferrer" className="ml-2 hover:text-[var(--accent)]">
+                                GitHub
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <div>
@@ -44,8 +50,8 @@ return (
                             </Link>
                         </li>
                         <li>
-                            <Link href="/work" className="hover:text-[var(--accent)]">
-                                My work
+                            <Link href="/blog/all-posts" className="hover:text-[var(--accent)]">
+                                All my posts
                             </Link>
                         </li>
                     </ul>

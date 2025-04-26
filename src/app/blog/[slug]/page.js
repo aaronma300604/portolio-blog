@@ -8,7 +8,6 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import ZoomBlurBackground from '@/components/ZoomBlurBackground';
 import { LinkIcon, techIcons } from '@/components/Icons';
-import ProgressScrollBar from '@/components/ProgressScrollBar';
 import Link from 'next/link';
 import Image from 'next/image';
 

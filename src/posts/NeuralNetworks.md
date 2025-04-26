@@ -2,7 +2,7 @@
 tags:
   - MachineLearningTheory
   - Project
-last_update: 2025-04-23
+last_update: 2025-04-25
 title: Neural Networks, an universal function approximator
 image: /images/neural-networks-bg.png
 description: Explaining the logic behind neural networks
