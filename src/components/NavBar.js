@@ -1,7 +1,9 @@
+"use client";
 import React from 'react';
 import Link from 'next/link';
 import ThemeSwitch from './ThemeSwitch';
 import { GitHubIcon, LinkedInIcon } from './Icons';
+import ContactDropdown from './ContactDropdown';
 
 const NavBar = () => {
     return (
@@ -17,11 +19,7 @@ const NavBar = () => {
             Blog
             </Link>
         </li>
-        <li className="group px-4 py-2 rounded transition-colors duration-200 hover:bg-[var(--navbar-options-hover)]">
-            <Link href="/work" className="block w-full h-full">
-            My work
-            </Link>
-        </li>
+        <ContactDropdown />
         </ul>
         <section className="flex items-center space-2">
         <ThemeSwitch />
