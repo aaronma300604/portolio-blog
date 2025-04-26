@@ -1,0 +1,20 @@
+.particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7); /* O el color que desees para las partículas */
+    border-radius: 50%;
+    animation: fall infinite linear;
+  }
+  
+  .fall {
+    animation-name: fall;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100vh); /* Hace que las partículas caigan hasta la parte inferior */
+    }
+  }
+  

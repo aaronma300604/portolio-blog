@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { ArrowIcon } from "@/components/Icons"; 
+import Link from "next/link";
 
 export default function PostListCard({ href, image, title, description, last_update, tags }) {
     return (
-        <a
+        <Link
             href={href}
-            className="block bg-[var(--post-container-bg)] rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105 overflow-hidden w-full max-w-3xl mx-auto flex items-center p-4 space-x-4 group"
+            className=" bg-[var(--post-container-bg)] rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 transform hover:scale-105 overflow-hidden w-full max-w-3xl mx-auto flex items-center p-4 space-x-4 group z-10"
         >
             <div className="flex-shrink-0">
                 <Image
@@ -48,6 +49,6 @@ export default function PostListCard({ href, image, title, description, last_upd
                     {ArrowIcon}
                 </span>
             </div>
-        </a>
+        </Link>
     );
 }

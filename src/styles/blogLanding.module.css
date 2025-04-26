@@ -1,0 +1,26 @@
+.typingEffect {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    border-right: 8px solid var(--br-principal);
+    white-space: nowrap;
+    visibility: hidden;
+    animation: typing 1s steps(9) 0.5s forwards, blink 1.25s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+    width: 0;
+    visibility: visible;
+    }
+    100% {
+    width: 9ch;
+    visibility: visible;
+    }
+}
+
+@keyframes blink {
+    50% {
+    border-color: transparent;
+    }
+}

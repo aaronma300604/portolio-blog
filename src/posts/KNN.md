@@ -3,8 +3,8 @@ tags:
   - MachineLearningTheory
   - Algorithm
 last_update: 2025-04-23
-image: /images/neural-networks-bg.png
 title: KNN, a proximity sensor
+image: /images/knn-bg.png
 description: Explaining the K nearest neighbors algorithm
 link: https://github.com/aaronma300604/LearningMachineLearning
 ---
@@ -58,4 +58,4 @@ $$
 $$
 where $x_{i,j}$ represents the value for the attribute $i$ in the example $j$ and $\oplus$ is the XOR operation, which only returns $1$ when both operands are different .
 
-Euclidean and Manhattan distances can be used with numeric data, Hamming distance is used when the data is described only by categorical features and cosine similitude can be used when the examples are represented as vectors (for example, with a [[tf-idf]] codification in the context of Natural Language Processing). When using cosine similitude, we have to take in account we need to choose the most similar (the biggest number, as opposite as when using distances).
+Euclidean and Manhattan distances can be used with numeric data, Hamming distance is used when the data is described only by categorical features and cosine similitude can be used when the examples are represented as vectors (for example, with a tf-idf codification in the context of Natural Language Processing). When using cosine similitude, we have to take in account we need to choose the most similar (the biggest number, as opposite as when using distances).

@@ -8,6 +8,7 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import ZoomBlurBackground from '@/components/ZoomBlurBackground';
 import { LinkIcon } from '@/components/Icons';
+import ProgressScrollBar from '@/components/ProgressScrollBar';
 
 
 
@@ -66,7 +67,7 @@ const renderers = {
     h4: ({ node, ...props }) => <h4 className="mt-6 text-xl font-semibold" id={generateHeaderIdFromChildren(props.children)} {...props} />,
     h5: ({ node, ...props }) => <h5 className="mt-6 text-0.5xl font-semibold" id={generateHeaderIdFromChildren(props.children)} {...props} />,
     p: ({ node, ...props }) => <p className="my-4" {...props} />,
-    a: ({ node, ...props }) => <a className="text-blue-600 underline" {...props} />,
+    a: ({ node, ...props }) => <a className="text-[var(--br-principal)] font-semibold hover:text-[var(--br-principal-hover)] transition-colors duration-300" {...props} />, //#0066cc #003366
     ul: ({ node, ...props }) => <ul className="list-disc pl-8 my-4" {...props} />, 
     ol: ({ node, ...props }) => <ol className="list-decimal pl-8 my-4" {...props} />,
     li: ({ node, ...props }) => <li className="my-2" {...props} />,
@@ -84,6 +85,7 @@ export default async function Page({ params }) {
     const transformedContent = transformObsidianLinks(content);
   
     return (
+      <>
       <ZoomBlurBackground imageUrl={data.image || '/images/examplecart.svg'}>
       <div className="prose max-w-4xl mt-40 mx-auto p-8 bg-[var(--post-container-bg)]/70 backdrop-blur-md rounded-2xl shadow-xl">
       <div className="flex items-center mt-10">
@@ -93,7 +95,7 @@ export default async function Page({ params }) {
         href={data.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="ml-4 w-8 h-8 flex items-center justify-center"
+        className="ml-4 w-8 h-8 flex items-center justify-center text-[var(--br-principal)] hover:text-[var(--br-principal-hover)] transition-colors duration-300"
         >
         {LinkIcon}
         </a>
@@ -109,5 +111,7 @@ export default async function Page({ params }) {
       </ReactMarkdown>
       </div>
       </ZoomBlurBackground>
+      <ProgressScrollBar />  
+      </>
     );
   }

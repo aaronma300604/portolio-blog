@@ -7,7 +7,11 @@
   --navbar-options-text: #121212;
   --navbar-options-hover: #e5e5e5;
   --buttons-bg: #e5e5e5;
-  --buttons-hover: #d3d3d3; 
+  --buttons-hover: #d3d3d3;
+  --scroll-bar-progressing: #eee;
+  --br-principal: #e6a4b4;
+  --br-principal-hover: #cc7087;
+ 
 
 }
 html {
@@ -15,14 +19,21 @@ html {
 }
 
 .dark {
-  --background: #121212;
+  --background: #212121;
   --foreground: #ededed;
   --post-container-bg: #171717; 
   --navbar-options-text: #d3d3d3;
   --navbar-options-hover: #2a2a2a; 
   --buttons-bg: #2a2a2a;
   --buttons-hover: #3a3a3a;
+  --scroll-bar-progressing: #2f2f2f;
+  --br-principal: #00c950;
+  --br-principal-hover: #007c32;
 }
+
+
+
+
 
 body {
   background: var(--background);
@@ -30,32 +41,15 @@ body {
   font-family: var(--font-geist-mono), Arial, Helvetica, sans-serif;
 }
 
-.typing-effect {
-  display: inline-block;
-  width: 0;
-  overflow: hidden;
-  border-right: 8px solid var(--navbar-options-text);
-  white-space: nowrap;
-  visibility: hidden;
-  animation: typing 1s steps(9) 0.5s forwards, blink 1.25s step-end infinite;
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
 
-@keyframes typing {
-  0% {
-    width: 0;
-    visibility: visible;
-  }
-  100% {
-    width: 9ch;
-    visibility: visible;
-  }
-}
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
+
+
+
 
 
 

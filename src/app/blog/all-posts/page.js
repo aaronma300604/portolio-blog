@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import PostListCard from "@/components/PostListCard";
+import ProgressScrollBar from "@/components/ProgressScrollBar";
 
 export default function AllPosts() {
     function getPosts() {
@@ -39,8 +40,8 @@ export default function AllPosts() {
     });
 
     return (
+        <>        
         <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)] px-8 py-16">
-            {/* Text Section */}
             <div className="text-center mb-12">
                 <h1 className="text-3xl font-semibold mb-4">All my posts</h1>
                 <p className="text-lg max-w-2xl mx-auto">
@@ -50,10 +51,11 @@ export default function AllPosts() {
                 </p>
             </div>
 
-            {/* Cards Section */}
             <div className="grid grid-cols-1 gap-6">
                 {postCards}
             </div>
         </div>
+        <ProgressScrollBar />  
+        </>
     );
 }

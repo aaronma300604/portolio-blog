@@ -12,8 +12,8 @@ export default function PostCard({ href, image, title, description, last_update,
         : "Date not available"; 
 
     return (
-        <Link href={href}>
-            <div className="block bg-[var(--post-container-bg)] rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 transform hover:scale-105 overflow-hidden h-full flex flex-col">
+        <Link href={href} className="z-10">
+            <div className=" bg-[var(--post-container-bg)] rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 transform hover:scale-105 overflow-hidden h-full flex flex-col">
                 <Image
                     width={850}
                     height={850}

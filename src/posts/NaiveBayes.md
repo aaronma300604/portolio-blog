@@ -2,9 +2,9 @@
 tags:
   - MachineLearningTheory
   - Algorithm
-title: It's not bad being Naive (Bayes)
 last_update: 2025-04-23
-image: /images/neural-networks-bg.png
+title: It's not bad being Naive (Bayes)
+image: /images/naive-bayes-bg.png
 description: Explaining the Naive Bayes  algorithm
 link: https://github.com/aaronma300604/LearningMachineLearning
 
