@@ -37,7 +37,7 @@ return(
 
         <div className="relative w-1/3 bg-[var(--post-container-bg)]">
             <div className="absolute inset-0 flex justify-center items-center">
-            <div className="w-40 h-40 rounded-full overflow-hidden">
+            <div className="w-40 h-30 md:h-40 rounded-xl md:rounded-full overflow-hidden">
                 <Image
                 src="/images/AboutMe.png" 
                 alt="Sobre mí"
@@ -51,10 +51,10 @@ return(
         </div>
     </section>
     
-    <div className="flex flex-row mt-12 w-full max-w-4xl justify-center items-stretch p-4 relative gap-8 mx-auto">
-        <section className="flex-1 flex flex-col">
-        <div className="border-2 border-[var(--foreground)]/40 p-4 rounded-lg h-full">
-            <h2 className="text-2xl font-bold mb-4 text-center">About me<strong className="text-[var(--br-principal)]">.</strong></h2>
+    <div className="flex flex-col md:flex-row mt-12 w-full max-w-4xl justify-center items-center md:items-stretch p-4 relative gap-8 mx-auto">
+        <section className="flex-1 flex flex-col w-full">
+        <div className="border-2 border-[var(--foreground)]/40 p-4 rounded-lg h-full text-center md:text-left">
+            <h2 className="text-2xl font-bold mb-4">About me<strong className="text-[var(--br-principal)]">.</strong></h2>
             <p>
             I&apos;m passionate about Machine Learning and AI, fields where I&apos;m constantly learning and developing personal projects.
             </p>
@@ -73,7 +73,7 @@ return(
         </div>
         </section>
 
-        <section className="flex-1 flex flex-col">
+        <section className="flex-1 flex flex-col w-full">
         <div className="border-2 border-[var(--foreground)]/40 p-4 pb-8 rounded-lg h-full flex flex-col max-h-[450px]">
             <h2 className="text-2xl font-bold mb-4 text-center">My<strong className="text-[var(--br-principal)]">...</strong>Projects<strong className="text-[var(--br-principal)]">?</strong></h2>
             <div className="flex-grow">

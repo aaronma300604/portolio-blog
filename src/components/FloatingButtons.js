@@ -30,7 +30,7 @@ const scrollToTop = () => {
 };
 
 return (
-    <div className="fixed bottom-6 left-6 z-50 flex flex-col gap-3">
+    <div className="hidden md:flex fixed bottom-6 left-6 z-50 flex-col gap-3" >
     <button 
         onClick={scrollToTop} 
         className={`w-12 h-12 bg-[var(--buttons-hover)] text-[var(--br-principal)] rounded-full flex items-center justify-center shadow-lg hover:bg-opacity-90 transition-all transform ${showScrollButton ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}
