@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <ParticlesBackground />
         <NavBar />
         <ProgressScrollBar />
-        <main className="pt-20 flex-1 md:flex-grow">{children}</main>
+        <main className="md:pt-20 pt-16 flex-1 md:flex-grow">{children}</main>
         <FloatingButtons />
         <Footer />
       </body>

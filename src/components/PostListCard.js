@@ -25,7 +25,7 @@ export default function PostListCard({ href, image, title, description, last_upd
                 <p className="text-sm text-[var(--foreground)]/80 line-clamp-2">
                     {description}
                 </p>
-                <div className="flex items-center space-x-2 mt-2">
+                <div className="flex flex-col space-x-0 space-y-1 mt-2 items-center md:space-x-2  md:flex-row md:space-y-0">
                     {tags.slice(0, 3).map((tag, index) => (
                         <span
                             key={index}
@@ -37,7 +37,7 @@ export default function PostListCard({ href, image, title, description, last_upd
                 </div>
             </div>
 
-            <div className="flex-shrink-0 text-right">
+            <div className="hidden md:flex flex-shrink-0 text-right">
                 <span className="text-xs text-[var(--foreground)]/60 block mb-2">
                     {new Date(last_update).toLocaleDateString("en-US", {
                         year: "numeric",
